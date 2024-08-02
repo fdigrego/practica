@@ -1,17 +1,16 @@
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
-# Create your views here.
 def inicio(request):
-    return HttpResponse("Hello World. You're at the AppCoder index.")
+    return render(request, "AppCoder/index.html")
 
 def cursos(request):
-    return HttpResponse("Hello World. You're at the AppCoder cursos.")
+    return render(request, 'AppCoder/cursos.html')
 
 def profesores(request):
-    return HttpResponse("Hello World. You're at the AppCoder profesores.")
+    return render(request, 'AppCoder/profesores.html')
 
 def estudiantes(request):
-    return HttpResponse("Hello World. You're at the AppCoder entregables.")
+    return render(request, 'AppCoder/estudiantes.html')
 
 def entregables(request):
-    return HttpResponse("Hello World. You're at the AppCoder entregables.")
+    return render(request, 'AppCoder/entregables.html')
