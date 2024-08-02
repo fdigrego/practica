@@ -54,7 +54,7 @@ ROOT_URLCONF = 'practica.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./practica/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

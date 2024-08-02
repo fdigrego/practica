@@ -7,5 +7,23 @@
 </head>
 <body>
     Hola esta es mi primer plantilla en django!
+    <p style="color: red"> Hola {{nombre}}, estamos haciendo uso de variables por contexto</p>
+	<p style="color: green">Y podemos acceder al apellido "{{apellido}}" porque tenemos acceso a ambas variables.
+        <br>También aplicamos estilos pero luego lo haremos con CSS porque no es buena práctica hacerlo en el archivo html.</p>
+
+        <h3>Notas:</h3>
+
+        <!-- <p>Nota: {{n}}</p> -->
+
+        {% for n in notas %}
+
+            {% if n >= 6 %}
+                <p style="color: green">Aprobado: {{n}}</p>
+            {% else %}
+                <p style="color: red">Reprobado: {{n}}</p>
+            {% endif %}
+
+        {% endfor %}
+
 </body>
 </html>
